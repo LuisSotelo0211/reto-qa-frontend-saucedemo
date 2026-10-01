@@ -1,0 +1,32 @@
+{
+  "name": "reto-playwright",
+  "version": "1.0.0",
+  "description": "Reto QA Front: Sauce Demo con Playwright, Cucumber, TypeScript y Page Object Model",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:dry": "cucumber-js --dry-run --format summary",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "typescript",
+    "qa",
+    "automation",
+    "e2e",
+    "saucedemo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.2.1",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.9.3"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
+}
