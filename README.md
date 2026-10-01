@@ -6,7 +6,7 @@ Automatización de pruebas funcionales para **Sauce Demo** desarrollada con **Pl
 
 Para configurar y ejecutar el proyecto se necesita:
 
-- Node.js 22 o superior
+- Node.js 24 (recomendado para reproducir esta entrega)
 - npm
 - Git
 
@@ -173,7 +173,9 @@ La carpeta `reports` está excluida del repositorio mediante `.gitignore`.
 ## Notas
 
 - Las pruebas requieren conexión a Internet y acceso a Sauce Demo.
-- Se requiere Node.js 22 o superior.
+- Se recomienda Node.js 24.
 - El proyecto fue desarrollado y probado utilizando Node.js 24.
 - Para ejecutar sin mostrar Chromium, cambiar `headless: false` por `headless: true` en `tests/support/hooks.ts`.
 - Si Chromium no está instalado, ejecutar `npx playwright install chromium`.
+
+El informe de cobertura, estrategia y patrones está en [docs/ESTRATEGIA.md](docs/ESTRATEGIA.md).

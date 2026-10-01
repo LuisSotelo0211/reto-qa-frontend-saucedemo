@@ -120,13 +120,17 @@ export class CheckoutPage {
       `Item total: $${expectedItemTotal.toFixed(2)}`
     );
 
+    // Sauce Demo aplica un impuesto del 8%, redondeado a dos decimales.
+    const expectedTax = Number((expectedItemTotal * 0.08).toFixed(2));
+    const expectedTotal = expectedItemTotal + expectedTax;
+
     await expect(
       this.page.locator('.summary_tax_label')
-    ).toContainText('Tax:');
+    ).toHaveText(`Tax: $${expectedTax.toFixed(2)}`);
 
     await expect(
       this.page.locator('.summary_total_label')
-    ).toContainText('Total:');
+    ).toHaveText(`Total: $${expectedTotal.toFixed(2)}`);
   }
 
   async finish(): Promise<void> {
